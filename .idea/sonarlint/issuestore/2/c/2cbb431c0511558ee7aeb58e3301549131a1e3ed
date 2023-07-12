@@ -1,0 +1,21 @@
+
+v
+java:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(ê½˜Ú8²şËµ”1
+{
+java:S22938"YReplace the type specification in this constructor call with the diamond operator ("<>").(úÃ¡áüÿÿÿÿ8³şËµ”1
+v
+java:S2293:"YReplace the type specification in this constructor call with the diamond operator ("<>").(É¾¡8³şËµ”1
+{
+java:S2293D"YReplace the type specification in this constructor call with the diamond operator ("<>").(ïäÄÈøÿÿÿÿ8³şËµ”1
+v
+java:S2293J"YReplace the type specification in this constructor call with the diamond operator ("<>").(•Œ¢8³şËµ”1
+{
+java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÀ¶ùÿÿÿÿ8³şËµ”1
+v
+java:S2293W"YReplace the type specification in this constructor call with the diamond operator ("<>").(öÉÂØ8´şËµ”1
+T
+java:S3655A"7Call "Optional#isPresent()" before accessing the value.(ÎÉßÙ8üşËµ”1
+Y
+java:S3655?"7Call "Optional#isPresent()" before accessing the value.(çŒäÀşÿÿÿÿ8üşËµ”1
+C
+java:S1452H"&Remove usage of generic wildcard type.(¹ßğ8ÿËµ”1

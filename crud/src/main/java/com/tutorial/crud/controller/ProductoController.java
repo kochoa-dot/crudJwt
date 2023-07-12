@@ -84,4 +84,23 @@ public class ProductoController {
         productoService.delete(id);
         return new ResponseEntity<Mensaje>(new Mensaje("Producto eliminado"), HttpStatus.OK);
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/createMult")
+    public ResponseEntity<Mensaje> createMult(@RequestBody List<ProductoDto> productosDto) {
+        for (ProductoDto productoDto : productosDto) {
+            if (StringUtils.isBlank(productoDto.getNombre()))
+                return new ResponseEntity<>(new Mensaje("El nombre del producto es obligatorio"), HttpStatus.BAD_REQUEST);
+            if (productoDto.getPrecio() == null || productoDto.getPrecio() < 0)
+                return new ResponseEntity<>(new Mensaje("El precio debe ser mayor que 0.0"), HttpStatus.BAD_REQUEST);
+            if (productoService.existsByNombre(productoDto.getNombre()))
+                return new ResponseEntity<>(new Mensaje("El nombre " + productoDto.getNombre() + " ya se encuentra registrado"), HttpStatus.BAD_REQUEST);
+
+            Producto producto = new Producto(productoDto.getNombre(), productoDto.getPrecio());
+            productoService.save(producto);
+        }
+
+        return new ResponseEntity<>(new Mensaje("Productos creados con éxito"), HttpStatus.CREATED);
+    }
+
 }
